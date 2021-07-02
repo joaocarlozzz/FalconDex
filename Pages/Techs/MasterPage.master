@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Pages_Techs_MasterPage" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
+    <link rel="manifest" href="/img/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#007bff" />
+
+    <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet"/> 
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/style/Style.css" rel="stylesheet" />
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="row main">
+        <nav class="col-lg-3 weapper menu navbar navbar-expand-lg navbar-dark bg-primary flex-column">
+            <div class="container-fluid p-3">
+                <a href="/inicio" class="d-lg-none badge text-white"><i class="fa fa-arrow-left fa-2x text-white font-weight-lighter"></i></a>
+                <div class="sidebar-header">
+                    <a class="navbar-brand " href="#">
+                        <h3><asp:Label ID="lblTitle" runat="server" Text="Nada"/></h3>
+                    </a>
+                </div>
+                <button class="navbar navbar-toggler" type="button" data-target="#navbarMenu" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="nav collapse navbar-collapse w-100 p-3 align-items-start" id="navbarMenu">
+                <ul class="navbar-nav nav flex-column">
+                    <li class="nav-item">
+                        <a href="/perfil" class="nav-link lead row">
+                            <i class="fa fa-user mr-3 col-1"></i><span class="col-1">Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/chamado" class="nav-link lead row">
+                            <i class="fa fa-book mr-3 col-1"></i><span class="col-1">Chamados</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/local" class="nav-link lead row">
+                            <i class="fa fa-map-marker mr-3 col-1"></i><span class="col-1">Local</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/tecnicos" class="nav-link lead row">
+                            <i class="fa fa-users mr-3 col-1"></i><span class="col-1">Técnicos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/equipamentos" class="nav-link lead row">
+                            <i class="fa fa-laptop mr-3 col-1"></i><span class="col-1">Equipamentos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link lead row">
+                            <i class="fa fa-tag mr-3 col-1"></i><span class="col-1">Solicitantes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/emprestimo" class="nav-link lead row">
+                            <i class="fa fa-hand-o-up mr-3 col-1"></i><span class="col-1">Empréstimos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/graficos" class="nav-link lead row">
+                            <i class="fa fa-bar-chart mr-3 col-1"></i><span class="col-1">Gráficos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/relatorios" class="nav-link lead row">
+                            <i class="fa fa-clipboard mr-3 col-1"></i><span class="col-1">Relatórios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/index" class="nav-link lead row">
+                            <i class="fa fa-sign-out mr-3 col-1"></i><span class="col-1">SAIR</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="col-lg-9 ">
+            <div class="row p-3 d-none d-none d-lg-flex align-items-center border-bottom">
+                <div class="col-1">
+                    <a href="/inicio" class="badge badge-light"><i class="fa fa-arrow-left fa-2x text-black font-weight-lighter"></i></a>
+                </div>
+                <div class="col-10 text-center">
+                    <h1 class=""><asp:Label ID="lblTtile2" runat="server" Text="Nada"/></h1>
+                </div>
+                <div class="col-1">
+                    <img class="img-fluid rounded" src="img/android-icon-36x36.png" alt="Logo da Falcon Dex" />
+                </div>
+            </div>
+            <nav aria-label="breadcrumb" class="mt-2">
+              <ol class="breadcrumb">
+                    <span class="mr-2">Você está em:</span>
+                    <% if(this.Page.Title == "Página Inicial") { %>
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                    <% }
+                    else { %>
+                        <li class="breadcrumb-item"><a href="/inicio">Home</a></li>
+                         <li class="breadcrumb-item active" aria-current="page"><%= this.Page.Title %></li>
+                    <% } %>
+              </ol>
+            </nav>
+
+            <div id="con" class="d-flex p-2 flex-wrap flex-column">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+            <footer id="footer" class="p-3 mt-3 text-center">
+                <span class="text-center">Falcon-dex. Todos os direitos reservados &copy; 2020</span>
+            </footer>
+        </div>
+
+    </div>
+    <script type="module" src="Scripts/popper.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script type="module" src="/misc/datepicker.esm.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log('ServiceWorker é suportado, vamos usar!');
+            navigator.serviceWorker.register('/misc/sw.js')
+                .then(reg => console.info('registered sw', reg))
+                .catch(err => console.error('error registering sw', err));
+        } else {
+            console.log('ServiceWorker não é suportado.');
+        }
+    </script>
+</body>
+</html>
